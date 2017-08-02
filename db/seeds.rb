@@ -1,4 +1,9 @@
 
+Voter.delete_all
+Vote.delete_all
+Candidate.delete_all
+
+
 voter_data = [{:full_name=>"stacey astoveza", :party=>"wrong"},
  {:full_name=>"martina weidenbaum", :party=>"wrong"},
  {:full_name=>"matt thorry", :party=>"right"},
