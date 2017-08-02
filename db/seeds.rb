@@ -1,25 +1,28 @@
-voter_data = [{:full_name=>"Stacey Astoveza", :party=>"wrong"},
- {:full_name=>"Martina Weidenbaum", :party=>"wrong"},
- {:full_name=>"Matt Thorry", :party=>"right"},
- {:full_name=>"Yamini Kumawat", :party=>"right"},
- {:full_name=>"Matthew Croak", :party=>"wrong"},
- {:full_name=>"Neil Steiner", :party=>"wrong"},
- {:full_name=>"Jen Volpe", :party=>"right"},
- {:full_name=>"Luke Glayat", :party=>"right"},
- {:full_name=>"James Miele", :party=>"wrong"},
- {:full_name=>"Brigit Rossbach", :party=>"right"}]
+
+voter_data = [{:full_name=>"stacey astoveza", :party=>"wrong"},
+ {:full_name=>"martina weidenbaum", :party=>"wrong"},
+ {:full_name=>"matt thorry", :party=>"right"},
+ {:full_name=>"yamini kumawat", :party=>"right"},
+ {:full_name=>"matthew croak", :party=>"wrong"},
+ {:full_name=>"neil steiner", :party=>"wrong"},
+ {:full_name=>"jen volpe", :party=>"right"},
+ {:full_name=>"luke glayat", :party=>"right"},
+ {:full_name=>"james miele", :party=>"wrong"},
+ {:full_name=>"brigit rossbach", :party=>"right"}]
 
  voter_data.each do |voter_d|
  	Voter.create(voter_d)
  end
 
-candidate_data = [{:name=>"Michael Scott", :position=>"Boss", :party=>"wrong"},
- {:name=>"Lindsey Wells", :position=>"Boss", :party=>"right"},
- {:name=>"Alex Griffith", :position=>"Vice Boss", :party=>"right"},
- {:name=>"Dwight Schrute", :position=>"Vice Boss", :party=>"wrong"},
- {:name=>"Johann Kerr", :position=>"Office Manager", :party=>"wrong"},
- {:name=>"Pam Beesly", :position=>"Office Manager", :party=>"right"}]
+candidate_data = [{:name=>"michael scott", :position=>"boss", :party=>"wrong"},
+ {:name=>"lindsey wells", :position=>"boss", :party=>"right"},
+ {:name=>"alex griffith", :position=>"vice boss", :party=>"right"},
+ {:name=>"dwight schrute", :position=>"vice boss", :party=>"wrong"},
+ {:name=>"johann kerr", :position=>"office manager", :party=>"wrong"},
+ {:name=>"pam beesly", :position=>"office manager", :party=>"right"}]
 
   candidate_data.each do |candidate_d|
  	Candidate.create(candidate_d)
  end
+
+

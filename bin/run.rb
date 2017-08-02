@@ -1,4 +1,9 @@
 require_relative '../config/environment'
-
+ActiveRecord::Base.logger = nil
 greet
-get_voter_name
+loop do
+    found = get_voter_name
+    if found == true
+    	break
+	end
+end
