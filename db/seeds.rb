@@ -14,7 +14,6 @@ voter_data = [{:full_name=>"stacey astoveza", :party=>"wrong"},
  {:full_name=>"luke glayat", :party=>"right"},
  {:full_name=>"james miele", :party=>"wrong"},
  {:full_name=>"brigit rossbach", :party=>"right"},
-<<<<<<< HEAD
  {:full_name=>"collen williams", :party=>"wrong"},
  {:full_name=>"isabelle letaconnoux", :party=>"right"},
  {:full_name=>"gabriela d'avila ferrera", :party=>"right"},
@@ -27,10 +26,6 @@ voter_data = [{:full_name=>"stacey astoveza", :party=>"wrong"},
  {:full_name=>"dean banik", :party=>"right"},
  {:full_name=>"hui wang", :party=>"wrong"},
  {:full_name=>"tim freeman", :party=>"right"}]
-=======
- {:full_name=>"kesean woodhouse", :party=>"right"},
-{:full_name=>"david epstein", :party=>"wrong"}]
->>>>>>> 098fe253cbc2201016f22495cc7047110ff9b6c9
 
  voter_data.each do |voter_d|
  	Voter.create(voter_d)
