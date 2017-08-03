@@ -1,7 +1,10 @@
 # require_relative '../config/environment'
+<<<<<<< HEAD
 
 # require_relative '../config/environment'
-
+=======
+require_relative '../config/environment'
+>>>>>>> 098fe253cbc2201016f22495cc7047110ff9b6c9
 
 def greet
     puts "***************************************************"
@@ -162,13 +165,15 @@ def store(final_hash)
 	end
 end
 
-
-
 def submit_method(final_hash)
+<<<<<<< HEAD
 	puts "These are the list of people that will change your life:"
 	puts manipulate_final_hash(final_hash)
 	puts "Are you sure about that?\r\n
 	 'y' for TOTES SURE, 'n' for I WANNA CHANGE MY MIND"
+=======
+	puts "Your votes are the following: \n #{manipulate_final_hash(final_hash)} \n Would you like to submit? \n 'y' to submit, 'n' to start again"
+>>>>>>> 098fe253cbc2201016f22495cc7047110ff9b6c9
 	answer = gets.chomp
 	if answer == 'y'
 		puts "Congrats! You just rigged the election! JK"
@@ -177,5 +182,3 @@ def submit_method(final_hash)
 		menu_option(final_hash.values[0])
 	end
  end
-
-
