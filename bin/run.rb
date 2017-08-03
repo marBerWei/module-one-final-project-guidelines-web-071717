@@ -7,7 +7,6 @@ ActiveRecord::Base.logger = nil
 
 # cli.greet
 # cli.get_voter_name
-
 greet
 loop do
     found = get_voter_name
