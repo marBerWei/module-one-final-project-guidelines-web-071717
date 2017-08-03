@@ -1,7 +1,5 @@
 # require_relative '../config/environment'
-
 require_relative '../config/environment'
-
 
 def greet
   puts "Welcome to the VoTiNg MaChIne! :)"
@@ -135,13 +133,8 @@ def store(final_hash)
 	end
 end
 
-
-
 def submit_method(final_hash)
-	puts "Your votes are the following:"
-	puts manipulate_final_hash(final_hash)
-	puts "Would you like to submit?"
-	puts "'y' to submit, 'n' to start again"
+	puts "Your votes are the following: \n #{manipulate_final_hash(final_hash)} \n Would you like to submit? \n 'y' to submit, 'n' to start again"
 	answer = gets.chomp
 	if answer == 'y'
 		puts "Deuces"
@@ -150,5 +143,3 @@ def submit_method(final_hash)
 		menu_option(final_hash.values[0])
 	end
  end
-
-
