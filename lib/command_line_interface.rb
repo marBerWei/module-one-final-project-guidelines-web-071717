@@ -16,19 +16,19 @@ def get_voter_name
   full_name = Voter.find_by(full_name: downcased)
     if full_name
         puts "Alright alright alright, " +user_answer+".\r\nYou ready for this d0e?"
-        puts "'1' for YEE"
-        puts "'2' for NAH HOLD UP"
+        puts "1. for YEE"
+        puts "2. for NAH HOLD UP"
         answer = gets.chomp
-        if  answer == "1"
-        menu_option(downcased)
-        else answer == "2"
-        greet
-        get_voter_name
-      end
-
+          if  answer == "1"
+            menu_option(downcased)
+          elsif answer == "2"
+            exit_method
+          else 
+            puts "not valid input \n please select a number"
+            get_voter_name
+          end
     else
-        puts "Sorry! New vote, who dis?"
-          greet
+        puts "Please give a valid answer"
           get_voter_name
     end
   full_name !=nil
@@ -41,22 +41,27 @@ def menu_option(user_name)
   answer = gets.chomp
     if answer == "1"
       list_candidates(user_name)
-  elsif answer == "2"
+    elsif answer == "2"
       check_party(user_name)
-  elsif answer == "3"
-  	 if check_if_position_already_voted_for(user_name)
-  		  puts "You already voted you cray cray!"
-  	 else
-  		  vote_now(user_name)
-  	end
-  end
+    elsif answer == "3"
+    
+  	   if check_if_position_already_voted_for(user_name)
+  		    puts "You already voted you cray cray!"
+          exit_method
+  	   else
+  		    vote_now(user_name)
+  	   end
+    else 
+      puts "not valid input \n please select a number"
+      menu_option(user_name)
+    end
 end
 
 def list_candidates(user_name)
    Candidate.all.select do |candidate|
     puts "#{candidate.name}, Position: #{candidate.position}, Party: #{candidate.party}"
   end
-    puts "press b to go back to the menu option"
+    puts "press any key to go back to the menu option"
 
       answer = gets.chomp
       if answer == "b" 
@@ -70,7 +75,7 @@ def check_party(voter_name)
   voter_party = voter_instance.party 
   puts "You are in the "+voter_party+" party."
 
-  puts "press b to go back to the menu option"
+  puts "press any key to go back to the menu option"
 
       answer = gets.chomp
       if answer == "b"
@@ -127,6 +132,7 @@ end
 #return value of next_page is the answer
 def next_page(cand_ids)
   puts "Type the number of the candidate you want to vote for"
+  answer = gets.chomp
   if cand_ids.include? answer.to_i
     answer
   else
@@ -178,4 +184,7 @@ def submit_method(final_hash)
 	end
  end
 
+def exit_method
+  exit 
+end
 
