@@ -1,4 +1,4 @@
-v0TiNg MaChInE!
+VoTiNg MaChInE!
 by: martina weidenbaum and stacey astoveza
 
 Welcome to the Voting Machine, where you can select your candidate from the "right" or "wrong" party. 
